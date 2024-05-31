@@ -2,17 +2,8 @@ import { useState } from "react";
 import validator from "validator"; // Import the "validator" library
 
 function FormValidation() {
-  const [formData, setFormData] = useState({
-    username: "",
-    email: "",
-    password: "",
-  });
-
-  const [formErrors, setFormErrors] = useState({
-    username: "",
-    email: "",
-    password: "",
-  });
+  // use useState to create 2 state variables named formData and formError and assign them an object
+  // with properties of username, email and password
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -63,10 +54,10 @@ function FormValidation() {
             type="text"
             id="username"
             name="username"
-            value={formData.username}
+            // value={formData.username}
             onChange={handleInputChange}
           />
-          <span className="error">{formErrors.username}</span>
+          {/* <span className="error">{formErrors.username}</span> */}
         </div>
 
         <div className="form-group">
@@ -75,10 +66,10 @@ function FormValidation() {
             type="email"
             id="email"
             name="email"
-            value={formData.email}
+            // value={formData.email}
             onChange={handleInputChange}
           />
-          <span className="error">{formErrors.email}</span>
+          {/* <span className="error">{formErrors.email}</span> */}
         </div>
 
         <div className="form-group">
@@ -87,10 +78,10 @@ function FormValidation() {
             type="password"
             id="password"
             name="password"
-            value={formData.password}
+            // value={formData.password}
             onChange={handleInputChange}
           />
-          <span className="error">{formErrors.password}</span>
+          {/* <span className="error">{formErrors.password}</span> */}
         </div>
 
         <button

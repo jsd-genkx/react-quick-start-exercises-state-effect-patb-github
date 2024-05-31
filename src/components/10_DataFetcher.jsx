@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 
 function DataFetcher() {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  // use useState to create 3 state variables named data, loading and error
+  // set initial state to null for data and error, and true for loading
 
   useEffect(() => {
     // Effect function: performs side effect (data fetching)
@@ -16,11 +15,11 @@ function DataFetcher() {
           throw new Error("Network response was not ok");
         }
         const result = await response.json();
-        setData(result);
+        // setData(); // pass result into setData
       } catch (error) {
-        setError(error);
+        // setError(); // pass error into setError
       } finally {
-        setLoading(false);
+        // setLoading(); // pass false into setLoading
       }
     };
 
@@ -32,21 +31,21 @@ function DataFetcher() {
     };
   }, []); // Dependency array: empty, so the effect runs only once after the initial render
 
-  if (loading) {
-    return <p>Loading...</p>;
-  }
+  // if (loading) {
+  //   return <p>Loading...</p>;
+  // }
 
-  if (error) {
-    return <p>Error: {error.message}</p>;
-  }
+  // if (error) {
+  //   return <p>Error: {error.message}</p>;
+  // }
 
   return (
     <div>
       <h1 className="mb-4 font-bold text-2xl">Fetched Data:</h1>
       <ul className="list-disc list-inside">
-        {data.map((item) => (
+        {/* {data.map((item) => (
           <li key={item.id}>{item.title}</li>
-        ))}
+        ))} */}
       </ul>
     </div>
   );

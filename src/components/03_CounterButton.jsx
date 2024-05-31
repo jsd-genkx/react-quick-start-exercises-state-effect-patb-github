@@ -1,15 +1,13 @@
-import { useState } from "react";
-
 function StateHook() {
-  const [count, setCount] = useState(0);
+  // use useState here
 
   function handleClick() {
-    setCount(count + 1);
+    // set state variable here
   }
 
   return (
     <button className="border rounded w-[300px] mb-2" onClick={handleClick}>
-      Clicked {count} times
+      {/* Clicked {count} times */}
     </button>
   );
 }

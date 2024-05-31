@@ -1,10 +1,7 @@
 import { useState } from "react";
 
 function FormExample() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-  });
+  // use useState to create a state variable named formData and assign it an object with properties name and email
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -28,7 +25,7 @@ function FormExample() {
             <input
               type="text"
               name="name"
-              value={formData.name}
+              // value={formData.name}
               onChange={handleChange}
             />
           </label>
@@ -39,7 +36,7 @@ function FormExample() {
             <input
               type="email"
               name="email"
-              value={formData.email}
+              // value={formData.email}
               onChange={handleChange}
             />
           </label>

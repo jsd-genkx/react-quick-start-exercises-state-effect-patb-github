@@ -1,11 +1,7 @@
-import { useEffect } from "react";
-
 const FirstEffect = () => {
-  const greeting = () => {
-    alert("Welcome to my web application.");
-  };
+  // create a const variable and assign a greeting message as a string
 
-  useEffect(greeting, []);
+  // use useEffect here to trigger greeting
 
   return (
     <div>
