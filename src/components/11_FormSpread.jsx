@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function FormSpread() {
-  const [person, setPerson] = useState({}); // create properties of firstName, lastName and email and give initial string values
+  const [person, setPerson] = useState({firstName: "", lastName: "", email: ""}); // create properties of firstName, lastName and email and give initial string values
 
   function handleFirstNameChange(e) {
     setPerson({
@@ -13,6 +13,7 @@ export default function FormSpread() {
   function handleLastNameChange(e) {
     setPerson({
       // use spread operator to assign values of properties in the state variable named person
+      ...person,
       lastName: e.target.value,
     });
   }
@@ -20,6 +21,7 @@ export default function FormSpread() {
   function handleEmailChange(e) {
     setPerson({
       // use spread operator to assign values of properties in the state variable named person
+      ...person,
       email: e.target.value,
     });
   }

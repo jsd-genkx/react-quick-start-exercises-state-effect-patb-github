@@ -4,6 +4,8 @@ import validator from "validator"; // Import the "validator" library
 function FormValidation() {
   // use useState to create 2 state variables named formData and formError and assign them an object
   // with properties of username, email and password
+  const [formData, setFormData] = useState({username:"", email:"", password:""});
+  const [formErrors, setFormErrors] = useState({username:"", email:"", password:""});
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;

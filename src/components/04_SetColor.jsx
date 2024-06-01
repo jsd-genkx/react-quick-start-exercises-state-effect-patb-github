@@ -1,8 +1,12 @@
+import { useState } from "react";
+
 function SetColor() {
   // use useState here
+  const [isYellow, setIsYellow] = useState(true);
+
   return (
     <div>
-      {/* {color === "yellow" && ( */}
+      {isYellow &&
       <div
         className="border rounded flex justify-center items-center"
         style={{
@@ -13,10 +17,10 @@ function SetColor() {
         }}
       >
         YELLOW
-      </div>
+      </div>}
       {/* )} */}
 
-      {/* {color === "blue" && ( */}
+      {!isYellow &&
       <div
         className="border rounded flex justify-center items-center"
         style={{
@@ -27,18 +31,18 @@ function SetColor() {
         }}
       >
         BLUE
-      </div>
+      </div>}
       {/* )} */}
 
       <button
         className="border rounded px-2 mr-2"
-        onClick={() => {}} // set state variable here
+        onClick={() => {setIsYellow(true)}} // set state variable here
       >
         Show Yellow
       </button>
       <button
         className="border rounded px-2 mr-2"
-        onClick={() => {}} // set state variable here
+        onClick={() => {setIsYellow(false)}} // set state variable here
       >
         Show Blue
       </button>

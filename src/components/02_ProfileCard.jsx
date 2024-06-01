@@ -9,6 +9,7 @@ export default function Profile() {
     <div>
       <h1 className="font-bold text-2xl">{user.name}</h1>
       {/* // create and render the user image  */}
+      <img src={user.imageUrl} alt={`Photo of ${user.name}`} width={user.imageSize} height={user.imageSize} />
     </div>
   );
 }

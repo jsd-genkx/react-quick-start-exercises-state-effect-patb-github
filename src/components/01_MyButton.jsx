@@ -1,7 +1,7 @@
 const MyButton = () => {
   return (
     // create a button
-    <button></button>
+    <button>CLICK ME!!!</button>
   );
 };
 

@@ -12,7 +12,11 @@ export default function ArraySpreadList() {
       <input value={name} onChange={(e) => setName(e.target.value)} />
       <button
         onClick={() => {
-          setInspiringPeople([{}]);
+          setInspiringPeople(
+            [...inspiringPeople,
+            {id: nextId++, name: name}
+            ]
+          );
           // use spread operator to create a new array with properties and values of the array artists
           // pass in new properties values as an object with a unique id and name
         }}
